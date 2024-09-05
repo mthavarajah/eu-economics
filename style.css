@@ -1,0 +1,110 @@
+* {box-sizing:border-box}
+
+body {
+    background-color: #002778;
+}
+
+.slideshow-container {
+  width: 1375px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  margin-top: -75px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #50B7E1;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #50B7E1;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.mySlides iframe {
+    border: none;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.fa-solid.fa-download {
+    position: absolute;
+    bottom: 53px;
+    right: 130px; 
+    color: #50B7E1;
+    font-size: 20px;
+    background: transparent;
+    transition: .2s ease;
+}
+
+.fa-solid.fa-circle-info {
+    position: absolute;
+    bottom: 53px;
+    right: 103px;
+    color: #50B7E1;
+    font-size: 20px;
+    background: transparent;
+    transition: .2s ease;
+}
+
+.fa-solid.fa-download:hover, .fa-solid.fa-circle-info:hover { 
+  color: white;
+}
+
+.header-title {
+  color: #50B7E1;
+  font-family: 'Poppins',sans-serif;
+  font-size: 30px;
+  padding: 30px 125px;
+}
+
+.fa-solid.fa-arrow-left-long {
+  color: #50B7E1;
+  font-size: 30px;
+  padding: 15px 30px;
+  transition: 0.3s ease;
+}
+
+.fa-solid.fa-arrow-left-long:hover {
+  color: white;
+}

@@ -1,0 +1,80 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    background-image: url("images/background.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.background{
+    width: 5000px;
+    height: 740px;
+    position: absolute;
+    transform: trasnalte(-50%,-50%);
+    left: center;
+    top: center;
+}
+
+form {
+    height: 330px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 53%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(155,155,155,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.16);
+    padding: 50px 35px;
+}
+
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+}
+
+#btn {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+#btn:hover {
+    background: #001489;
+    color: white;
+    box-shadow: 0 0 1rem #001489;
+}
+
+#btn-link {
+    text-decoration: none;
+    color: inherit;
+}

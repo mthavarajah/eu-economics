@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/772b7313f2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>EU Financial Economics</title>
+</head>
+<body>
+        <a href="home.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+        <div class="header-title">Financial Economics</div>
+
+<div class="slideshow-container">
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/current_account/current_account.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/external/current_account.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/main-figures/external-sector/current-account" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+                
+        </div>
+        
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/reserve_assets/reserve_assets.html" width="1200" height="500"></iframe></center>
+                        
+                </div>
+                <a id="downloadLink" href="datafiles/external/reserve_assets.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/reserve-assets" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+      
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/direct_investment/direct_investment.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/external/direct_investment.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/direct-investment" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/portfolio_investment_balance/portfolio_investment_balance.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/external/portfolio_investment_balance.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/data/data-categories/balance-payments-and-other-external-statistics/balance-payments-and-international-investment-position/financial-account/portfolio-investment" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/real_exchange_rate/real_exchange_rate.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/external/real_exchange_rate.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/methodology/exchange-rates" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="financial_economics/nominal_exchange_rate/nominal_exchange_rate.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/external/nominal_exchange_rate.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://www.ecb.europa.eu/mopo/eaec/eer/html/index.en.html" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+      
+<div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+        
+
+
+
+<div class="graph-container"></div>
+</body>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+ </script>
+</html>

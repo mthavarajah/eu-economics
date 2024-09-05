@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/772b7313f2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>EU Macroeconomics</title>
+</head>
+<body>
+        <a href="home.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+        <div class="header-title">Macroeconomics</div>
+
+<div class="slideshow-container">
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="macroeconomics/inflation/inflation.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/basics/inflation.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/main-figures/inflation" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+                
+        </div>
+        
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="macroeconomics/govdebt/govdebt.html" width="1200" height="500"></iframe></center>
+                        
+                </div>
+                <a id="downloadLink" href="datafiles/basics/government_debt.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/data/data-categories/prices-macroeconomic-and-sectoral-statistics/government-finance/government-debt/non-consolidated-debt/debt-holdings" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+      
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="macroeconomics/realGDP/realGDP.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/basics/real_GDP.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://www.ecb.europa.eu/stats/ecb_surveys/survey_of_professional_forecasters/html/table_hist_rgdp.en.html" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+
+        <div class="mySlides fade">
+                <div class="graph">
+                        <center><iframe src="macroeconomics/unemployment/unemployment.html" width="1200" height="500"></iframe></center>
+                </div>
+                <a id="downloadLink" href="datafiles/basics/unemployment.csv" download>
+                        <i class="fa-solid fa-download"></i>
+                </a>
+                <a href="https://data.ecb.europa.eu/data/concepts/unemployment?tags_array%5B0%5D=Unemployment&filterSequence=tags_array" target="_blank">
+                        <i class="fa-solid fa-circle-info"></i>
+                </a>
+        </div>
+
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+      
+<div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+        
+
+
+
+<div class="graph-container"></div>
+</body>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+ </script>
+</html>
