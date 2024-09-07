@@ -54,3 +54,13 @@ To set up the EU-Economics project locally, follow these steps:
 6. **View Graphs**
 
     Open the generated HTML files in your web browser to view the interactive graphs.
+
+7. **Open a Pull Request**
+
+## Contact
+
+For any inquiries or issues, please reach out to [Mathu Thavarajah](mthavarajah10@gmail.com).
+
+---
+
+**Ethernance** | Explore transactions and balances for Ethereum and Binance wallet addresses.
