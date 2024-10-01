@@ -1,4 +1,4 @@
-# EU-Economics
+# [EU-Economics Dashboard](mthavarajah.github.io/eu-economics/home.html)
 
 EU-Economics is a web application that visualizes European economic indicators over time. The project leverages interactive graphs and a user-friendly interface to present both financial and macroeconomic data. The application is built using Python for data processing and Plotly for interactive visualizations. It is hosted on Render, providing a seamless experience for users to explore various economic indicators.
 
